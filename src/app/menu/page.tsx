@@ -2,6 +2,7 @@
 
 import { useEffect, useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
+import Image from 'next/image'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -174,7 +175,7 @@ function Header({ settings, cart }: { settings: CafeSettings; cart: ReturnType<t
             <Link href="/" className="flex items-center gap-2">
               <div className="w-10 h-10 rounded-xl overflow-hidden bg-white shadow flex items-center justify-center">
                 {settings.cafeLogo ? (
-                  <img src={settings.cafeLogo} alt="Logo" className="w-9 h-9 object-contain" />
+                  <Image src={settings.cafeLogo} alt="Logo" width={36} height={36} className="w-9 h-9 object-contain" />
                 ) : (
                   <Coffee className="w-5 h-5 text-amber-700" />
                 )}
@@ -263,7 +264,7 @@ function MenuItemCard({ item, onAddToCart }: { item: MenuItem; onAddToCart: (ite
     <Card className={`group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 ${isOutOfStock ? 'opacity-60' : ''}`}>
       {item.image && (
         <div className="relative h-48 overflow-hidden">
-          <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+          <Image src={item.image} alt={item.name} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           <div className="absolute top-3 right-3 flex flex-col gap-1">
             {item.isNew && <Badge className="bg-green-500 text-white text-xs">Baru</Badge>}

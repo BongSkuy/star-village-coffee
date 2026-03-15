@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState, Suspense } from 'react'
+import Image from 'next/image'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -163,7 +164,7 @@ function Header({ settings }: { settings: CafeSettings }) {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="w-12 h-12 flex items-center justify-center overflow-hidden rounded-xl bg-white shadow-md group-hover:shadow-lg group-hover:scale-105 transition-all duration-300">
               {settings.cafeLogo ? (
-                <img src={settings.cafeLogo} alt="Logo" className="w-10 h-10 object-contain" />
+                <Image src={settings.cafeLogo} alt="Logo" width={40} height={40} className="w-10 h-10 object-contain" />
               ) : (
                 <Coffee className="w-6 h-6 text-amber-700" />
               )}
@@ -264,18 +265,22 @@ function HeroSection({ settings }: { settings: CafeSettings }) {
       {settings.cafeHeroImage ? (
         <div className="absolute inset-0">
           {/* Mobile version */}
-          <img 
+          <Image 
             src={settings.cafeHeroImage} 
             alt="Hero" 
-            className="w-full h-full object-cover sm:hidden"
+            fill
+            className="object-cover sm:hidden"
             style={{ objectPosition: getMobilePosition() }}
+            priority
           />
           {/* Desktop version */}
-          <img 
+          <Image 
             src={settings.cafeHeroImage} 
             alt="Hero" 
-            className="w-full h-full object-cover hidden sm:block"
+            fill
+            className="object-cover hidden sm:block"
             style={{ objectPosition: getDesktopPosition() }}
+            priority
           />
           {/* Stronger overlay for better text visibility */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/60 to-black/75 sm:from-black/70 sm:via-black/50 sm:to-black/70" />
@@ -532,7 +537,7 @@ function FeaturedMenuSection({ categories }: { categories: MenuCategory[] }) {
                 <Card key={item.id} className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300">
                   {item.image && (
                     <div className="relative h-48 overflow-hidden">
-                      <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                      <Image src={item.image} alt={item.name} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                       <div className="absolute top-3 right-3 flex gap-1">
                         {item.isNew && <Badge className="bg-green-500 text-white">Baru</Badge>}
@@ -997,10 +1002,11 @@ function GalleryPreviewSection({ images }: { images: GalleryImage[] }) {
               }`}
             >
               <div className={`bg-secondary ${index === 0 ? 'aspect-square md:aspect-auto md:h-full' : 'aspect-square'}`}>
-                <img
+                <Image
                   src={image.imageUrl}
                   alt={image.title || `Gallery ${index + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -1061,9 +1067,9 @@ function ReviewsSection({ reviews }: { reviews: Review[] }) {
               <CardContent className="p-8 md:p-12">
                 <div className="flex flex-col md:flex-row items-center gap-6">
                   {/* Avatar */}
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center flex-shrink-0 overflow-hidden shadow-lg">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center flex-shrink-0 overflow-hidden shadow-lg relative">
                     {displayReviews[currentIndex].avatar ? (
-                      <img src={displayReviews[currentIndex].avatar!} alt="" className="w-full h-full object-cover" />
+                      <Image src={displayReviews[currentIndex].avatar!} alt="" fill className="object-cover" />
                     ) : (
                       <span className="text-3xl font-bold text-white">{displayReviews[currentIndex].name.charAt(0)}</span>
                     )}
@@ -1160,7 +1166,7 @@ function LocationSection({ settings }: { settings: CafeSettings }) {
               <div className="flex items-center gap-4">
                 <div className="w-16 h-16 rounded-2xl bg-white shadow-lg flex items-center justify-center overflow-hidden">
                   {settings.cafeLogo ? (
-                    <img src={settings.cafeLogo} alt="Logo" className="w-14 h-14 object-contain" />
+                    <Image src={settings.cafeLogo} alt="Logo" width={56} height={56} className="w-14 h-14 object-contain" />
                   ) : (
                     <Coffee className="w-8 h-8 text-amber-700" />
                   )}
@@ -1271,7 +1277,7 @@ function Footer({ settings }: { settings: CafeSettings }) {
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-xl bg-white shadow-lg flex items-center justify-center overflow-hidden">
                 {settings.cafeLogo ? (
-                  <img src={settings.cafeLogo} alt="Logo" className="w-11 h-11 object-contain" />
+                  <Image src={settings.cafeLogo} alt="Logo" width={44} height={44} className="w-11 h-11 object-contain" />
                 ) : (
                   <Coffee className="w-6 h-6 text-amber-700" />
                 )}
