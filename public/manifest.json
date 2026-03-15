@@ -1,0 +1,27 @@
+{
+  "name": "Star Village Coffee",
+  "short_name": "Star Village",
+  "description": "Coffee shop terbaik di Boyolali dengan menu lengkap: kopi, makanan, dan minuman lezat. Free WiFi, area luas, mushola tersedia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#d97706",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "drink", "restaurant", "cafe"],
+  "lang": "id",
+  "dir": "ltr"
+}

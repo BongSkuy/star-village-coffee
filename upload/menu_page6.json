@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"categories\": [\n    {\n      \"name\": \"ROTI BAKAR\",\n      \"items\": [\n        {\n          \"name\": \"CARAMEL ORI\",\n          \"variants\": [\n            {\n              \"name\": \"CARAMEL ORI\",\n              \"price\": 9500\n            }\n          ]\n        },\n        {\n          \"name\": \"COKLAT\",\n          \"variants\": [\n            {\n              \"name\": \"COKLAT\",\n              \"price\": 9500\n            }\n          ]\n        },\n        {\n          \"name\": \"COKLAT KEJU\",\n          \"variants\": [\n            {\n              \"name\": \"COKLAT KEJU\",\n              \"price\": 10000\n            }\n          ]\n        },\n        {\n          \"name\": \"COKLAT VANILA\",\n          \"variants\": [\n            {\n              \"name\": \"COKLAT VANILA\",\n              \"price\": 10000\n            }\n          ]\n        },\n        {\n          \"name\": \"COKLAT PISANG\",\n          \"variants\": [\n            {\n              \"name\": \"COKLAT PISANG\",\n              \"price\": 10000\n            }\n          ]\n        },\n        {\n          \"name\": \"KEJU\",\n          \"variants\": [\n            {\n              \"name\": \"KEJU\",\n              \"price\": 10000\n            }\n          ]\n        },\n        {\n          \"name\": \"STRAWBERRY\",\n          \"variants\": [\n            {\n              \"name\": \"STRAWBERRY\",\n              \"price\": 10000\n            }\n          ]\n        },\n        {\n          \"name\": \"SOSIS TELUR\",\n          \"variants\": [\n            {\n              \"name\": \"SOSIS TELUR\",\n              \"price\": 11000\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"name\": \"TOAST\",\n      \"items\": [\n        {\n          \"name\": \"CARAMEL ORI\",\n          \"variants\": [\n            {\n              \"name\": \"CARAMEL ORI\",\n              \"price\": 12000\n            }\n          ]\n        },\n        {\n          \"name\": \"SMOKED BEEF\",\n          \"variants\": [\n            {\n              \"name\": \"SMOKED BEEF\",\n              \"price\": 15000\n            }\n          ]\n        },\n        {\n          \"name\": \"COKLAT\",\n          \"variants\": [\n            {\n              \"name\": \"COKLAT\",\n              \"price\": 15000\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1772484367,
+  "id": "202603030445465e9a4ebbb85d44ae",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "202603030445465e9a4ebbb85d44ae",
+  "usage": {
+    "completion_tokens": 544,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2604,
+    "prompt_tokens_details": {
+      "cached_tokens": 4
+    },
+    "total_tokens": 3148
+  }
+}

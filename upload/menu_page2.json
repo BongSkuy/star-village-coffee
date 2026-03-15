@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"categories\": [\n    {\n      \"name\": \"CLASSIC COFFEE\",\n      \"items\": [\n        {\n          \"name\": \"ESPRESSO\",\n          \"variants\": [\n            {\n              \"name\": \"HOT\",\n              \"price\": 10\n            }\n          ]\n        },\n        {\n          \"name\": \"AMERICANO\",\n          \"variants\": [\n            {\n              \"name\": \"HOT\",\n              \"price\": 12\n            },\n            {\n              \"name\": \"ICE\",\n              \"price\": 13\n            }\n          ]\n        },\n        {\n          \"name\": \"CAFELATTE\",\n          \"variants\": [\n            {\n              \"name\": \"HOT\",\n              \"price\": 15\n            },\n            {\n              \"name\": \"ICE\",\n              \"price\": 17\n            }\n          ]\n        },\n        {\n          \"name\": \"CAPPUCINO\",\n          \"variants\": [\n            {\n              \"name\": \"HOT\",\n              \"price\": 18\n            },\n            {\n              \"name\": \"ICE\",\n              \"price\": 19\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"name\": \"SIGNATURE COFFEE\",\n      \"items\": [\n        {\n          \"name\": \"SALTED CARAMEL ICE\",\n          \"variants\": [\n            {\n              \"name\": \"ICE\",\n              \"price\": 20\n            }\n          ]\n        },\n        {\n          \"name\": \"BUTTERSCOOTCH ICE\",\n          \"variants\": [\n            {\n              \"name\": \"ICE\",\n              \"price\": 20\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"name\": \"MANUAL BREW\",\n      \"items\": [\n        {\n          \"name\": \"KOPI TUBRUK\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 10\n            }\n          ]\n        },\n        {\n          \"name\": \"V60\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 15\n            }\n          ]\n        },\n        {\n          \"name\": \"VIETNAM DRIP\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 15\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1772484288,
+  "id": "202603030444290ec384d89d944754",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "202603030444290ec384d89d944754",
+  "usage": {
+    "completion_tokens": 486,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2604,
+    "prompt_tokens_details": {
+      "cached_tokens": 4
+    },
+    "total_tokens": 3090
+  }
+}

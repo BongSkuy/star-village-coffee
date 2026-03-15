@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"categories\": [\n    {\n      \"name\": \"BURGER\",\n      \"items\": [\n        {\n          \"name\": \"CHICKEN PATTY BURGER\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 16500\n            }\n          ]\n        },\n        {\n          \"name\": \"CHICKEN GARLIC BURGER\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 18000\n            }\n          ]\n        },\n        {\n          \"name\": \"BEEF PATTY BURGER\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 25000\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"name\": \"FOOD\",\n      \"items\": [\n        {\n          \"name\": \"SEGO TELUR CRISPY\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 14000\n            }\n          ]\n        },\n        {\n          \"name\": \"NASI TELUR ORAK ARIK\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 14500\n            }\n          ]\n        },\n        {\n          \"name\": \"NASI AYAM KATSU TERIYAKI\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 14500\n            }\n          ]\n        },\n        {\n          \"name\": \"NASI GORENG\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 15000\n            }\n          ]\n        },\n        {\n          \"name\": \"NASI AYAM SAMBAL BAWANG\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 15500\n            }\n          ]\n        },\n        {\n          \"name\": \"NASI KULIT SAMBAL BAWANG\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 15500\n            }\n          ]\n        },\n        {\n          \"name\": \"NASI GORENG SPESIAL\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 17000\n            }\n          ]\n        },\n        {\n          \"name\": \"NASI AYAM TERIYAKI\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 24000\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1772484416,
+  "id": "20260303044631d5ea737f8c204c28",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "20260303044631d5ea737f8c204c28",
+  "usage": {
+    "completion_tokens": 525,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2604,
+    "prompt_tokens_details": {
+      "cached_tokens": 119
+    },
+    "total_tokens": 3129
+  }
+}

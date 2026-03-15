@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"categories\": [\n    {\n      \"name\": \"TEA SELECTION\",\n      \"items\": [\n        {\n          \"name\": \"ORIGINAL TEA\",\n          \"variants\": [\n            { \"name\": \"HOT\", \"price\": 5 },\n            { \"name\": \"ICE\", \"price\": 8 }\n          ]\n        },\n        {\n          \"name\": \"LEMON TEA\",\n          \"variants\": [\n            { \"name\": \"HOT\", \"price\": 10 },\n            { \"name\": \"ICE\", \"price\": 13 }\n          ]\n        },\n        {\n          \"name\": \"LYCHE TEA\",\n          \"variants\": [\n            { \"name\": \"HOT\", \"price\": 10 },\n            { \"name\": \"ICE\", \"price\": 13 }\n          ]\n        }\n      ]\n    },\n    {\n      \"name\": \"JUICE\",\n      \"items\": [\n        {\n          \"name\": \"MANGGA\",\n          \"variants\": [\n            { \"name\": \"\", \"price\": 15 }\n          ]\n        },\n        {\n          \"name\": \"STRAWBERRY\",\n          \"variants\": [\n            { \"name\": \"\", \"price\": 15 }\n          ]\n        }\n      ]\n    },\n    {\n      \"name\": \"MY BOTTLE\",\n      \"items\": [\n        {\n          \"name\": \"KOPASUS\",\n          \"variants\": [\n            { \"name\": \"500ML\", \"price\": 30 },\n            { \"name\": \"1000ML\", \"price\": 60 }\n          ]\n        },\n        {\n          \"name\": \"KOPSU AREN\",\n          \"variants\": [\n            { \"name\": \"500ML\", \"price\": 30 },\n            { \"name\": \"1000ML\", \"price\": 60 }\n          ]\n        },\n        {\n          \"name\": \"KOPSU PANDAN\",\n          \"variants\": [\n            { \"name\": \"500ML\", \"price\": 30 },\n            { \"name\": \"1000ML\", \"price\": 60 }\n          ]\n        },\n        {\n          \"name\": \"GREEN TEA\",\n          \"variants\": [\n            { \"name\": \"500ML\", \"price\": 30 },\n            { \"name\": \"1000ML\", \"price\": 60 }\n          ]\n        },\n        {\n          \"name\": \"CHOCOLATE\",\n          \"variants\": [\n            { \"name\": \"500ML\", \"price\": 30 },\n            { \"name\": \"1000ML\", \"price\": 60 }\n          ]\n        },\n        {\n          \"name\": \"RED VELVET\",\n          \"variants\": [\n            { \"name\": \"500ML\", \"price\": 30 },\n            { \"name\": \"1000ML\", \"price\": 60 }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1772484327,
+  "id": "20260303044502201aac1298bc40c0",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "20260303044502201aac1298bc40c0",
+  "usage": {
+    "completion_tokens": 601,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2604,
+    "prompt_tokens_details": {
+      "cached_tokens": 4
+    },
+    "total_tokens": 3205
+  }
+}

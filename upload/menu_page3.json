@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"categories\": [\n    {\n      \"name\": \"COFFEE MOCKTAIL\",\n      \"items\": [\n        {\n          \"name\": \"CALAMASI COFFEE ICE\",\n          \"variants\": [\n            {\n              \"name\": \"ICE\",\n              \"price\": 20000\n            }\n          ]\n        },\n        {\n          \"name\": \"SUMMERKISS ICE\",\n          \"variants\": [\n            {\n              \"name\": \"ICE\",\n              \"price\": 20000\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"name\": \"MILKY BASE\",\n      \"items\": [\n        {\n          \"name\": \"GREEN TEA\",\n          \"variants\": [\n            {\n              \"name\": \"HOT\",\n              \"price\": 17000\n            },\n            {\n              \"name\": \"ICE\",\n              \"price\": 18000\n            }\n          ]\n        },\n        {\n          \"name\": \"RED VELVET\",\n          \"variants\": [\n            {\n              \"name\": \"HOT\",\n              \"price\": 17000\n            },\n            {\n              \"name\": \"ICE\",\n              \"price\": 18000\n            }\n          ]\n        },\n        {\n          \"name\": \"CHOCOLATTE\",\n          \"variants\": [\n            {\n              \"name\": \"HOT\",\n              \"price\": 17000\n            },\n            {\n              \"name\": \"ICE\",\n              \"price\": 18000\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"name\": \"KOPI SUSU\",\n      \"items\": [\n        {\n          \"name\": \"KOPI SUSU AREN ICE\",\n          \"variants\": [\n            {\n              \"name\": \"ICE\",\n              \"price\": 17000\n            }\n          ]\n        },\n        {\n          \"name\": \"KOPI SUSU PANDAN ICE\",\n          \"variants\": [\n            {\n              \"name\": \"ICE\",\n              \"price\": 17000\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"name\": \"MOCKTAIL\",\n      \"items\": [\n        {\n          \"name\": \"MOJITO\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 15000\n            }\n          ]\n        },\n        {\n          \"name\": \"KREMINT\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 15000\n            }\n          ]\n        },\n        {\n          \"name\": \"LEMONCELO\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 17000\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1772484304,
+  "id": "20260303044444662288225da44424",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "20260303044444662288225da44424",
+  "usage": {
+    "completion_tokens": 558,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2604,
+    "prompt_tokens_details": {
+      "cached_tokens": 119
+    },
+    "total_tokens": 3162
+  }
+}

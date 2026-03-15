@@ -1,0 +1,245 @@
+// Production schema for PostgreSQL (Vercel, Supabase, Neon, etc.)
+// This schema is used for production deployments on Vercel
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model MenuCategory {
+  id        String     @id @default(cuid())
+  name      String     @unique
+  slug      String     @unique
+  icon      String?
+  order     Int        @default(0)
+  items     MenuItem[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+
+  @@map("menu_categories")
+}
+
+model MenuItem {
+  id            String        @id @default(cuid())
+  name          String
+  description   String?
+  image         String?
+  rating        Float         @default(0)
+  totalRatings  Int           @default(0)
+  isPopular     Boolean       @default(false)
+  isNew         Boolean       @default(false)
+  isPromo       Boolean       @default(false)
+  stock         Int           @default(100)
+  isAvailable   Boolean       @default(true)
+  categoryId    String
+  category      MenuCategory  @relation(fields: [categoryId], references: [id])
+  variants      ItemVariant[]
+  order         Int           @default(0)
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  @@index([categoryId])
+  @@map("menu_items")
+}
+
+model ItemVariant {
+  id        String   @id @default(cuid())
+  name      String   // e.g., "HOT", "ICE", "500ML", "1000ML"
+  price     Float    // Price in thousands (K)
+  itemId    String
+  item      MenuItem @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([itemId])
+  @@map("item_variants")
+}
+
+model Order {
+  id               String       @id @default(cuid())
+  orderNumber      String       @unique
+  customerName     String?
+  customerPhone    String?
+  customerEmail    String?
+  subtotal         Float        @default(0)
+  discount         Float        @default(0)
+  voucherCode      String?
+  total            Float        @default(0)
+  status           String       @default("pending") // pending, confirmed, processing, ready, completed, cancelled
+  paymentStatus    String       @default("pending") // pending, waiting_confirmation, paid, refunded
+  paymentMethod    String       @default("cash") // cash, transfer, qris, cod
+  notes            String?
+  source           String       @default("website") // website, whatsapp, walkin
+
+  // Payment Proof fields (for Transfer/QRIS)
+  paymentProofImage     String?
+  paymentProofUploadedAt DateTime?
+  paymentVerifiedAt     DateTime?
+
+  // Customer Confirmation fields (for COD)
+  customerConfirmed     Boolean    @default(false)
+  customerConfirmedAt   DateTime?
+
+  // Loyalty points earned for this order
+  loyaltyPointsEarned   Int        @default(0)
+
+  // Delivery fields
+  orderType        String       @default("pickup") // pickup, delivery
+  deliveryAddress  String?
+  deliveryNotes    String?
+  deliveryFee      Float        @default(0)
+  deliveryMethod   String?      // staff, gosend
+  deliveryLat      Float?
+  deliveryLng      Float?
+  deliveryDistance Float?       // in km
+  deliveryZone     String?      // zona1, zona2, zona3
+  estimatedTime    String?      // estimated ready/delivery time
+
+  items            OrderItem[]
+  createdAt        DateTime     @default(now())
+  updatedAt        DateTime     @updatedAt
+
+  @@index([status])
+  @@index([createdAt])
+  @@index([customerPhone])
+  @@map("orders")
+}
+
+model OrderItem {
+  id          String   @id @default(cuid())
+  itemId      String?
+  itemName    String
+  variantName String?
+  variantId   String?
+  price       Float
+  quantity    Int
+  subtotal    Float
+  notes       String?
+  orderId     String
+  order       Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([orderId])
+  @@map("order_items")
+}
+
+model Promo {
+  id          String    @id @default(cuid())
+  code        String    @unique
+  discount    Float     // Percentage discount
+  minPurchase Float     @default(0)
+  maxUses     Int?
+  usedCount   Int       @default(0)
+  expiresAt   DateTime?
+  isActive    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@map("promos")
+}
+
+model Reservation {
+  id              String   @id @default(cuid())
+  reservationCode String?  @unique
+  name            String
+  phone           String
+  email           String?
+  date            String
+  time            String
+  guests          Int      @default(2)
+  seatingType     String   @default("indoor") // indoor atau outdoor
+  notes           String?
+  status          String   @default("pending")
+  adminNotes      String?  // Feedback dari admin ke customer
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([status])
+  @@index([date])
+  @@map("reservations")
+}
+
+model CafeSetting {
+  id          String   @id @default(cuid())
+  key         String   @unique
+  value       String
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("cafe_settings")
+}
+
+model NewsletterSubscriber {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("newsletter_subscribers")
+}
+
+model LoyaltyMember {
+  id         String   @id @default(cuid())
+  name       String
+  phone      String   @unique
+  email      String?
+  points     Int      @default(0)
+  totalSpent Float    @default(0)
+  level      String   @default("bronze") // bronze, silver, gold, platinum
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([phone])
+  @@map("loyalty_members")
+}
+
+model GalleryImage {
+  id          String   @id @default(cuid())
+  title       String?
+  description String?
+  imageUrl    String
+  order       Int      @default(0)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("gallery_images")
+}
+
+model Review {
+  id          String   @id @default(cuid())
+  name        String
+  avatar      String?
+  rating      Int      @default(5)
+  comment     String
+  source      String   @default("google") // google, tiktok, instagram
+  sourceUrl   String?  // Link to original review
+  isActive    Boolean  @default(true)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("reviews")
+}
+
+model DeliveryZone {
+  id           String   @id @default(cuid())
+  name         String   // Zona 1, Zona 2, Zona 3
+  minDistance  Float    // dalam km
+  maxDistance  Float    // dalam km
+  fee          Float    // ongkir dalam ribuan (5 = Rp5.000)
+  minOrder     Float    // minimum order dalam ribuan (20 = Rp20.000)
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("delivery_zones")
+}

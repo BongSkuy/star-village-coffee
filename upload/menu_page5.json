@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"categories\": [\n    {\n      \"name\": \"SNACK\",\n      \"items\": [\n        {\n          \"name\": \"TEMPE COCOL\",\n          \"variants\": [\n            {\n              \"name\": \"Regular\",\n              \"price\": 9500\n            }\n          ]\n        },\n        {\n          \"name\": \"TAHU COCOL\",\n          \"variants\": [\n            {\n              \"name\": \"Regular\",\n              \"price\": 9500\n            }\n          ]\n        },\n        {\n          \"name\": \"PISANG GORENG\",\n          \"variants\": [\n            {\n              \"name\": \"Regular\",\n              \"price\": 10000\n            }\n          ]\n        },\n        {\n          \"name\": \"MENDOAN\",\n          \"variants\": [\n            {\n              \"name\": \"Regular\",\n              \"price\": 10000\n            }\n          ]\n        },\n        {\n          \"name\": \"BASRENG DAUN JERUK\",\n          \"variants\": [\n            {\n              \"name\": \"Regular\",\n              \"price\": 10000\n            }\n          ]\n        },\n        {\n          \"name\": \"FRENCH FRIES ORI\",\n          \"variants\": [\n            {\n              \"name\": \"Regular\",\n              \"price\": 11000\n            }\n          ]\n        },\n        {\n          \"name\": \"FRENCH FRIES BALADO\",\n          \"variants\": [\n            {\n              \"name\": \"Regular\",\n              \"price\": 12000\n            }\n          ]\n        },\n        {\n          \"name\": \"SPAGHETTI BOLOGNAISE\",\n          \"variants\": [\n            {\n              \"name\": \"Regular\",\n              \"price\": 12000\n            }\n          ]\n        },\n        {\n          \"name\": \"BROKOLI CRISPY\",\n          \"variants\": [\n            {\n              \"name\": \"Regular\",\n              \"price\": 13500\n            }\n          ]\n        },\n        {\n          \"name\": \"SIGKONG KEJU\",\n          \"variants\": [\n            {\n              \"name\": \"Regular\",\n              \"price\": 13500\n            }\n          ]\n        },\n        {\n          \"name\": \"CIRENG\",\n          \"variants\": [\n            {\n              \"name\": \"Regular\",\n              \"price\": 15500\n            }\n          ]\n        },\n        {\n          \"name\": \"GETUK CRISPY\",\n          \"variants\": [\n            {\n              \"name\": \"Regular\",\n              \"price\": 15500\n            }\n          ]\n        },\n        {\n          \"name\": \"CUANGKI\",\n          \"variants\": [\n            {\n              \"name\": \"Regular\",\n              \"price\": 16000\n            }\n          ]\n        },\n        {\n          \"name\": \"PLATTER\",\n          \"variants\": [\n            {\n              \"name\": \"Regular\",\n              \"price\": 17500\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1772484384,
+  "id": "20260303044601f6e3287250214075",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "20260303044601f6e3287250214075",
+  "usage": {
+    "completion_tokens": 614,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2604,
+    "prompt_tokens_details": {
+      "cached_tokens": 4
+    },
+    "total_tokens": 3218
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"categories\": [\n    {\n      \"name\": \"MIE\",\n      \"items\": [\n        {\n          \"name\": \"INDOMIE TELUR REBUS\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 10000\n            }\n          ]\n        },\n        {\n          \"name\": \"MIE DOK DOK\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 12000\n            }\n          ]\n        },\n        {\n          \"name\": \"INDOMIE TELUR ABON\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 12500\n            }\n          ]\n        },\n        {\n          \"name\": \"INDOMIE TELUR KORNET\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 14500\n            }\n          ]\n        },\n        {\n          \"name\": \"INDOMIE AYAM KATSU\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 16000\n            }\n          ]\n        },\n        {\n          \"name\": \"INDOMIE CARBONARA\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 16000\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"name\": \"TAMBAHAN\",\n      \"items\": [\n        {\n          \"name\": \"ES BATU\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 2000\n            }\n          ]\n        },\n        {\n          \"name\": \"TOPPING TELUR\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 5000\n            }\n          ]\n        },\n        {\n          \"name\": \"NASI PUTIH\",\n          \"variants\": [\n            {\n              \"name\": \"\",\n              \"price\": 0\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1772484390,
+  "id": "20260303044616d9531d0a8e294735",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "20260303044616d9531d0a8e294735",
+  "usage": {
+    "completion_tokens": 417,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2604,
+    "prompt_tokens_details": {
+      "cached_tokens": 119
+    },
+    "total_tokens": 3021
+  }
+}
